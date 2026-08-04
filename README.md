@@ -42,4 +42,11 @@
 5. fix dry run mode
 6. export and import the exposure events as $experiment_started
 7. openFeature route - this will be a different flow 
-8. repeat the same for Remote Config
+8. DONE/repeat the same for Remote Config
+    Firebase Remote Config tool: `firebase_mixpanel_migration.html` + `firebase_migration.js`.
+    Parameters only — boolean params become gates, string/number/JSON params become value flags.
+    Only Firebase percentage rollouts migrate; all other condition rules (OS, country, app version,
+    user property, audience, installation ID, custom signals) are dropped and reported in step 3.
+    Firebase A/B Testing experiments are NOT migrated — firebaseabt.googleapis.com is a private,
+    allowlisted API with no public REST reference.
+    Auth is an OAuth2 bearer token (`gcloud auth print-access-token`), which expires hourly.

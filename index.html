@@ -153,6 +153,7 @@
   .provider-logo.opt  { background: #0037FF; }
   .provider-logo.stat { background: #1A1A1A; }
   .provider-logo.gb   { background: #162A3E; }
+  .provider-logo.fb   { background: #FFA000; }
 
   .provider-name { font-size: 15px; font-weight: 600; color: var(--gray-10); }
   .provider-type { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
@@ -384,6 +385,36 @@
         <div class="tool-card-tags">
           <span class="tag tag-of">OpenFeature</span>
           <span class="tag tag-api">Full API migration</span>
+        </div>
+      </div>
+      <div class="tool-card-footer">
+        <span class="tool-card-cta">Open tool <span class="tool-card-cta-arrow">→</span></span>
+        <span class="tool-card-status status-qa">In QA</span>
+      </div>
+    </a>
+
+    <!-- Firebase -->
+    <a class="tool-card" href="./firebase_mixpanel_migration.html">
+      <div class="tool-card-accent"></div>
+      <div class="tool-card-body">
+        <div class="tool-card-provider">
+          <div class="provider-logo fb">
+            <!-- Firebase flame mark, simplified -->
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 14.5L6.2 3.2C6.3 2.7 7 2.6 7.2 3.1L9 6.5L4 14.5Z" fill="white" opacity="0.75"/>
+              <path d="M4 14.5L11.8 2.4C12.1 1.9 12.8 2.1 12.9 2.7L15.5 14.5L10 17.4L4 14.5Z" fill="white"/>
+            </svg>
+          </div>
+          <div>
+            <div class="provider-name">Firebase</div>
+            <div class="provider-type">Remote Config</div>
+          </div>
+        </div>
+        <p class="tool-card-desc">Reads your Remote Config template and migrates parameters into Mixpanel — boolean parameters become gates, JSON/string/number parameters become value flags, with percentage rollouts carried across.</p>
+        <div class="tool-card-tags">
+          <span class="tag tag-api">Full API migration</span>
+          <span class="tag tag-api">Percent rollouts</span>
+          <span class="tag tag-soon">Parameters only</span>
         </div>
       </div>
       <div class="tool-card-footer">

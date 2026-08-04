@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Statsig → Mixpanel Migration Tool</title>
+<title>Firebase Remote Config → Mixpanel Migration Tool</title>
 <link rel="stylesheet" href="migration.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
         <path d="M0 73.4531H23.9775V70.905H22.1769C18.6724 70.905 17.8284 69.9485 17.8284 66.452V34.8384C20.2719 30.6988 23.5595 28.0462 27.6991 28.0462C32.8997 28.0462 36.0827 31.8643 36.0827 39.0825V66.46C36.0827 69.9646 35.2307 70.9131 31.8386 70.9131H29.9256V73.4611H53.3725V70.9131H51.6765C48.1719 70.9131 47.3279 69.9565 47.3279 66.46V37.9089C47.3279 36.9524 47.3279 35.9959 47.2234 35.0474C49.5545 30.8033 53.0591 28.0462 57.1986 28.0462C62.3993 28.0462 65.5823 31.8643 65.5823 39.0825V66.46C65.5823 69.9646 64.7303 70.9131 61.3382 70.9131H59.4252V73.4611H82.8721V70.9131H81.2806C77.6715 70.9131 76.8275 69.9565 76.8275 66.46V37.9089C76.8275 27.1942 70.7829 21.2541 61.9732 21.2541C55.3981 21.2541 49.667 24.8632 46.5884 32.0733C44.7879 25.0722 39.4828 21.2541 32.4737 21.2541C26.212 21.2541 20.8024 24.6461 17.8284 31.4383V22.5241H0V25.0722H2.12204C5.73112 25.0722 6.57511 26.0287 6.57511 29.5252V66.452C6.57511 69.9565 5.72308 70.905 2.12204 70.905H0V73.4531ZM96.9789 14.0359C100.797 14.0359 103.98 10.8529 103.98 7.03482C103.98 3.21675 100.797 0.0336914 96.9789 0.0336914C93.1608 0.0336914 89.9777 3.21675 89.9777 7.03482C89.9777 10.8529 93.1608 14.0359 96.9789 14.0359ZM85.0987 73.4531H108.65V70.905H107.059C103.554 70.905 102.71 69.9485 102.71 66.452V22.5241H84.8816V25.0722H87.0037C90.6127 25.0722 91.4567 26.0287 91.4567 29.5252V66.452C91.4567 69.9565 90.6047 70.905 87.0037 70.905H85.0906V73.4531H85.0987ZM125.843 43.5355H132.636C130.94 42.4745 130.305 40.9875 129.453 38.2304L126.904 28.7857C125.739 24.5417 124.782 22.5241 120.112 22.5241H110.354V25.0722H111.737C114.598 25.0722 114.92 26.1332 115.772 29.3162L117.998 37.5954C119.164 41.6305 120.972 43.5355 125.851 43.5355H125.843ZM141.55 43.5355H148.342C153.221 43.5355 154.917 41.6225 156.091 37.5954L158.317 29.3162C159.169 26.1332 159.587 25.0722 162.352 25.0722H163.735V22.5241H154.081C149.306 22.5241 148.35 24.4372 147.289 28.7857L144.741 38.2304C143.889 41.092 143.246 42.4745 141.55 43.5355ZM132.636 52.4497H141.55V43.5355H132.636V52.4497ZM110.354 73.4611H120.112C124.782 73.4611 125.739 71.4436 126.904 67.1995L129.453 57.7548C130.305 54.9978 130.94 53.5107 132.636 52.4497H125.843C120.964 52.4497 119.156 54.3628 117.99 58.3898L115.764 66.669C114.912 69.852 114.598 70.9131 111.729 70.9131H110.346V73.4611H110.354ZM154.065 73.4611H163.719V70.9131H162.336C159.579 70.9131 159.153 69.852 158.301 66.669L156.074 58.3898C154.909 54.3547 153.213 52.4497 148.326 52.4497H141.55C143.246 53.5107 143.865 54.8933 144.717 57.7548L147.265 67.1995C148.326 71.5481 149.282 73.4611 154.057 73.4611H154.065ZM165.101 94.6815H189.714V92.1335H187.166C183.774 92.1335 182.922 91.1769 182.922 87.6804V67.4165C186 71.9821 191.201 74.7392 197.35 74.7392C208.917 74.7392 218.144 64.555 218.144 46.9437C218.144 31.0283 209.447 21.2702 198.194 21.2702C191.619 21.2702 186.097 25.0882 182.913 31.8804V22.5402H165.085V25.0882H167.207C170.712 25.0882 171.66 26.0448 171.66 29.5413V87.6724C171.66 91.1769 170.704 92.1254 167.207 92.1254H165.085V94.6735L165.101 94.6815ZM194.175 27.8372C201.071 27.8372 206.698 34.3079 206.698 47.1446C206.698 61.1469 201.497 68.791 194.392 68.791C189.826 68.791 185.799 66.3475 182.93 62.1034V35.7869C185.687 30.5863 189.617 27.8292 194.175 27.8292V27.8372ZM234.92 74.5221C241.816 74.5221 247.33 71.2346 251.47 63.8074V64.973C251.47 71.3391 255.505 74.0961 262.185 74.0961C264.202 74.0961 266.75 73.8871 268.446 73.3566V70.7041C267.594 70.9131 266.959 71.0256 266.324 71.0256C263.672 71.0256 262.82 69.4341 262.82 66.886V39.7175C262.82 27.1942 255.818 21.2541 244.043 21.2541C236.19 21.2541 228.553 24.8632 223.674 28.6812L225.37 31.6553C230.466 28.1507 235.45 26.1412 240.86 26.1412C247.861 26.1412 251.47 29.9593 251.47 38.8735V41.2045L238.416 46.3006C226.536 51.1797 222.179 55.7453 222.179 62.6419C222.179 69.5386 227.058 74.5221 234.912 74.5221H234.92ZM233.328 59.8768C233.328 54.5717 236.407 50.7537 242.668 47.9966L251.478 44.1786V60.7289C248.19 65.2945 244.372 67.947 240.233 67.947C236.093 67.947 233.336 65.0855 233.336 59.8849L233.328 59.8768ZM270.568 73.4611H294.763V70.9131H292.745C289.241 70.9131 288.397 69.9565 288.397 66.46V34.9429C290.84 30.6988 294.441 28.0462 298.685 28.0462C304.199 28.0462 307.704 31.8643 307.704 39.0825V66.46C307.704 69.9646 306.852 70.9131 303.46 70.9131H301.442V73.4611H325.524V70.9131H323.402C319.793 70.9131 318.949 69.9565 318.949 66.46V37.9089C318.949 27.1942 312.583 21.2541 303.564 21.2541C296.989 21.2541 291.467 24.6461 288.389 31.4383V22.5241H270.56V25.0722H272.682C276.291 25.0722 277.135 26.0287 277.135 29.5252V66.452C277.135 69.9565 276.283 70.905 272.682 70.905H270.56V73.4531L270.568 73.4611ZM353.111 74.7311C360.112 74.7311 366.695 71.5481 371.47 67.73L369.878 65.399C365.634 68.4775 360.859 69.8521 356.406 69.8521C345.587 69.8521 339.221 62.2159 339.221 47.3616V45.4486H372.748C372.539 31.1248 363.729 21.3666 350.892 21.3666C338.056 21.3666 327.759 32.9334 327.759 48.2137C327.759 64.981 337.308 74.7392 353.119 74.7392L353.111 74.7311ZM350.989 24.0111C357.355 24.0111 361.277 30.9078 361.92 42.579H339.43C340.387 30.8033 344.84 24.0111 350.997 24.0111H350.989ZM375.071 73.4531H399.683V70.905H397.24C393.735 70.905 392.891 69.9485 392.891 66.452V1.3037H375.063V3.85176H377.185C380.689 3.85176 381.638 4.80828 381.638 8.30483V66.452C381.638 69.9565 380.681 70.905 377.185 70.905H375.063V73.4531H375.071Z" fill="#7856FF"/>
       </svg>
       <div class="sidebar-logo-sub">
-        Statsig <span>→</span> Mixpanel Migration Tool
+        Firebase Remote Config <span>→</span> Mixpanel
       </div>
     </div>
     <div class="sidebar-nav">
@@ -47,31 +47,41 @@
     <div class="view active" id="view-config">
       <div class="view-header">
         <div class="view-title">Configure connections</div>
-        <div class="view-sub">Enter your Statsig and Mixpanel credentials to get started.</div>
+        <div class="view-sub">Enter your Firebase and Mixpanel credentials to get started.</div>
       </div>
 
       <div class="alert alert-info">
-        This tool calls the <strong>Statsig Console API</strong> directly from your browser. Your Console API key is a
-        <strong>secret</strong> — only run this tool locally / on a trusted machine, and never share the page with the key filled in.
+        This tool calls the <strong>Firebase Remote Config REST API</strong> directly from your browser (read-only — nothing is written back to Firebase).
+        Your access token is a <strong>secret</strong> — only run this tool locally / on a trusted machine, and never share the page with the token filled in.
       </div>
 
       <div class="alert alert-ok" id="restore-banner" style="display:none">
         ↩ Restored your previous session from this browser — credentials, fetched flags, and selections were reloaded. Use <strong>Clear saved state</strong> to wipe them.
       </div>
 
-      <div class="section-label">Statsig</div>
+      <div class="section-label">Firebase</div>
       <div class="card">
         <div class="grid-2">
+          <div class="field">
+            <label>Project ID</label>
+            <input type="text" id="fb-project" autocomplete="off" placeholder="my-firebase-project (not the project number)"/>
+          </div>
+          <div class="field">
+            <label>OAuth access token</label>
+            <input type="password" id="fb-token" autocomplete="off" placeholder="ya29.a0Ae..."/>
+          </div>
           <div class="field span2">
-            <label>Console API key</label>
-            <input type="password" id="st-key" autocomplete="off" placeholder="console-xxxxxxxxxxxxxxxx (Project Settings → Keys & Environments)"/>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.6">
+              Generate a token with <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px">gcloud auth print-access-token</code>,
+              or use a service account scoped to <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px">https://www.googleapis.com/auth/firebase.remoteconfig</code>.
+              <strong>Tokens expire after about an hour</strong> — if a fetch fails with 401, paste a fresh one.
+            </div>
           </div>
           <div class="field span2">
             <label>What to import</label>
             <div class="checkbox-row">
-              <label><input type="checkbox" id="imp-gates" checked/> Feature gates</label>
-              <label><input type="checkbox" id="imp-exps" checked/> Experiments</label>
-              <label><input type="checkbox" id="imp-configs" checked/> Dynamic configs</label>
+              <label><input type="checkbox" id="imp-gates" checked/> Boolean parameters (→ gates)</label>
+              <label><input type="checkbox" id="imp-configs" checked/> String / number / JSON parameters (→ configs)</label>
             </div>
           </div>
         </div>
@@ -113,7 +123,7 @@
       </div>
 
       <div style="display:flex;gap:10px;align-items:center;margin-top:4px">
-        <button class="btn btn-primary" id="btn-fetch" onclick="fetchFlags()">Fetch from Statsig</button>
+        <button class="btn btn-primary" id="btn-fetch" onclick="fetchFlags()">Fetch from Firebase</button>
         <label class="dry-run-label">
           <input type="checkbox" id="dry-run" checked/> Dry run
         </label>
@@ -129,8 +139,8 @@
     <!-- STEP 2: Select flags -->
     <div class="view" id="view-select">
       <div class="view-header">
-        <div class="view-title">Select flags to migrate</div>
-        <div class="view-sub">Choose which gates and experiments to import, set the Mixpanel SDK, and select the evaluation mode for each one.</div>
+        <div class="view-title">Select parameters to migrate</div>
+        <div class="view-sub">Choose which Remote Config parameters to import, set the Mixpanel SDK, and select the evaluation mode for each one.</div>
       </div>
 
       <div class="export-bar">
@@ -143,9 +153,8 @@
         <input type="text" id="search" placeholder="Search by key or name…" oninput="renderTable()"/>
         <select id="f-source" onchange="renderTable()">
           <option value="">All sources</option>
-          <option value="gate">Feature gates</option>
-          <option value="experiment">Experiments</option>
-          <option value="config">Dynamic configs</option>
+          <option value="gate">Boolean (gates)</option>
+          <option value="config">Value (configs)</option>
         </select>
         <select id="f-status" onchange="renderTable()">
           <option value="">All statuses</option>
@@ -155,9 +164,9 @@
         </select>
         <select id="f-type" onchange="renderTable()">
           <option value="">All rule types</option>
-          <option value="experiment">Experiment</option>
-          <option value="rollout">Rollout</option>
-          <option value="plain">No rules</option>
+          <option value="rollout">Percent rollout</option>
+          <option value="targeted">Targeted (not migrated)</option>
+          <option value="plain">No conditions</option>
         </select>
         <span class="badge" id="count-badge">0 flags</span>
         <button class="btn btn-sm" onclick="goTo('code')">Code samples →</button>
@@ -177,7 +186,7 @@
             <th>Source</th>
             <th>Status</th>
             <th>Rule type</th>
-            <th>Rules / Groups</th>
+            <th>Conditions</th>
             <th>Mixpanel SDK</th>
             <th>Eval mode</th>
           </tr></thead>
@@ -190,8 +199,8 @@
     <!-- STEP 3: Export report -->
     <div class="view" id="view-export">
       <div class="view-header">
-        <div class="view-title">Flag migration report</div>
-        <div class="view-sub">Shareable summary of all retrieved gates and experiments and their migration status.</div>
+        <div class="view-title">Migration report</div>
+        <div class="view-sub">Shareable summary of all retrieved Remote Config parameters and what will and will not carry over.</div>
       </div>
 
       <div class="export-bar">
@@ -203,11 +212,13 @@
 
       <div class="stats-row" id="report-stats"></div>
 
+      <div id="report-warnings"></div>
+
       <div class="card" style="padding:0;overflow:hidden">
         <table id="report-table">
           <thead><tr>
             <th>Key</th><th>Name</th><th>Source</th><th>Status</th><th>Rule type</th>
-            <th>Rules / Groups</th><th>SDK assigned</th><th>Eval mode</th><th>Selected</th>
+            <th>Conditions</th><th>SDK assigned</th><th>Eval mode</th><th>Selected</th>
           </tr></thead>
           <tbody id="report-tbody"></tbody>
         </table>
@@ -236,16 +247,17 @@
     <div class="view" id="view-import">
       <div class="view-header">
         <div class="view-title">Import to Mixpanel</div>
-        <div class="view-sub">Creates experiments first where needed, then feature flags.</div>
+        <div class="view-sub">Creates one Mixpanel feature flag per selected Remote Config parameter.</div>
       </div>
 
       <div class="alert alert-warn" style="margin-bottom:20px">
-        <strong>⚠ Variant assignment key</strong> — The assignment key (context field) will be automatically mapped from Statsig's idType: <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px">userID</code> or <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px">stableID</code> → <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px">distinct_id</code>, <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px">deviceID</code> → <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px">$device_id</code>. If any gate or experiment in Statsig used a different unit ID that doesn't map correctly, you must update the assignment key manually in the Mixpanel UI <strong>before enabling those flags</strong>. This cannot be changed once a flag is enabled.
+        <strong>⚠ Variant assignment key</strong> — Firebase Remote Config has no equivalent of a per-flag unit ID, so every flag is created with the assignment key (context field) set to <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px">distinct_id</code>. If a parameter should be assigned on device rather than user, update the assignment key manually in the Mixpanel UI <strong>before enabling that flag</strong>. This cannot be changed once a flag is enabled.<br/><br/>
+        <strong>⚠ Targeting is not migrated</strong> — Only Firebase percentage rollouts carry over. Conditions on OS, country, app version, user property, audience, installation ID or custom signals are dropped; see the report in step 3 for the exact list.
       </div>
 
       <div class="stats-row">
         <div class="stat-card"><div class="stat-n" id="s-total">0</div><div class="stat-l">flags selected</div></div>
-        <div class="stat-card"><div class="stat-n" id="s-exp" style="color:var(--purple-06)">0</div><div class="stat-l">experiments created</div></div>
+        <div class="stat-card"><div class="stat-n" id="s-exp" style="color:var(--purple-06)">0</div><div class="stat-l">skipped (already exist)</div></div>
         <div class="stat-card"><div class="stat-n" id="s-flag" style="color:var(--grass-06)">0</div><div class="stat-l">flags created</div></div>
         <div class="stat-card"><div class="stat-n" id="s-fail" style="color:var(--lava-07)">0</div><div class="stat-l">failed</div></div>
       </div>
@@ -265,6 +277,6 @@
   </main>
 </div>
 
-<script src="statsig_migration.js"></script>
+<script src="firebase_migration.js"></script>
 </body>
 </html>
